@@ -24,23 +24,15 @@
             flavor = "tap-preferred";
             bindings = <&mo>, <&kp>;
         };
-        bspc_lyr: bspc_layer {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <150>;
-            flavor = "tap-preferred";
-            bindings = <&mo>, <&kp>;
-        };
     };
     keymap {
         compatible = "zmk,keymap";
         default_layer {
             bindings = 
-&kp TAB     &kp Q  &kp W  &kp E     &kp R             &kp T      &kp Y      &kp U             &kp I      &kp O    &kp P     &kp ENTER
-&kp ESCAPE  &kp A  &kp S  &kp D     &kp F             &kp G      &kp H      &kp J             &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LSHFT   &kp Z  &kp X  &kp C     &kp V             &kp B      &kp N      &kp M             &kp COMMA  &kp DOT  &kp FSLH  &kp RIGHT_SHIFT
-                          &kp LGUI  &spc_lwr 1 SPACE  &kp DEL    &kp ENTER  &bspc_lyr 2 BSPC  &kp RALT
+&kp TAB     &kp Q  &kp W  &kp E     &kp R             &kp T      &kp Y      &kp U            &kp I      &kp O    &kp P     &kp ENTER
+&kp ESCAPE  &kp A  &kp S  &kp D     &kp F             &kp G      &kp H      &kp J            &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LSHFT   &kp Z  &kp X  &kp C     &kp V             &kp B      &kp N      &kp M            &kp COMMA  &kp DOT  &kp FSLH  &kp RIGHT_SHIFT
+                          &kp LGUI  &spc_lwr 1 SPACE  &kp DEL    &kp ENTER  &spc_lwr 2 BSPC  &kp RALT
             >;
         };
         lower_layer {
